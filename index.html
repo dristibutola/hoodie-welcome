@@ -1,3 +1,6 @@
+<html>
+<head>
+<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
 <script>
 var urlParams;
 (window.onpopstate= function(){
@@ -11,7 +14,7 @@ var urlParams;
 	while(match = search.exec(query))
 		urlParams[decode(match[1])]=decode(match[2]);
 })();
-</script
+</script>
 <script>
 $(document).ready(function(){
     $("button").click(function(){
@@ -22,5 +25,10 @@ $(document).ready(function(){
     });
 });
 </script>
-<p><a href="https://github.com/login/oauth/authorize?client_id=14a973416657e234da0a">Login with Github</a></p>
-<button type="button">Load Profile</button> 
+</head>
+<body>
+
+	<p><a href="https://github.com/login/oauth/authorize?client_id=14a973416657e234da0a">Login with Github</a></p>
+<button type="button">Load Profile</button>
+</body>
+</html>
