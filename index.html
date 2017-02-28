@@ -1,0 +1,26 @@
+<script>
+var urlParams;
+(window.onpopstate= function(){
+	var match,
+		p1=/\+/g,
+		search = /([^&=]+)=?([^&]*)/g,
+		decode = function(s){
+			returnURIComponents(s.replace(p1," ")); },
+		query =window.location.search.substring(1);
+	urlParams={};
+	while(match = search.exec(query))
+		urlParams[decode(match[1])]=decode(match[2]);
+})();
+</script
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+       $.getJSON('http://localhost:5000/14a973416657e234da0a/urlParams.code') .done(function (data) {
+	       console.log('data', data) }) .fail(function (data) 
+		       { console.log('failed', data) }); 
+
+    });
+});
+</script>
+<p><a href="https://github.com/login/oauth/authorize?client_id=14a973416657e234da0a">Login with Github</a></p>
+<button type="button">Load Profile</button> 
