@@ -1,27 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hoodie</title>
 </head>
 
-<script>
-	$(document).ready(function() {
-		$("button").click(function() {
+<body>
+    <p><a href="https://github.com/login/oauth/authorize?client_id=14a973416657e234da0a">Login with Github</a></p>
+    <button type="button">Load Profile</button>
+    <script src="script.js">
 
-			const clientId = '14a973416657e234da0a';
-			var code = window.location.search;
-			code = code.replace("?code=", '');
-			console.log(code);
+    </script>
+</body>
 
-			$.getJSON(`http://localhost:5000/${clientId}/${code}`)
-				.done(function(data) {
-					console.log('data', data);
-				})
-				.fail(function(data) {
-					console.log('failed', data);
-				});
-
-		});
-	});
-</script>
-
-<p><a href="https://github.com/login/oauth/authorize?client_id=14a973416657e234da0a">Login with Github</a></p>
-<button type="button">Load Profile</button>
+</html>
