@@ -18,10 +18,11 @@
 				.fail(function(data) {
 					console.log('failed', data);
 				});
+			var ACCESS_TOKEN=console.log(data.access_token);
 
 		});
 	});
 </script>
 
 <p><a href="https://github.com/login/oauth/authorize?client_id=14a973416657e234da0a">Login with Github</a></p>
-<button type="button">Load Profile</button>
+<a href= "api.github.com/users?access_token=ACCESS_TOKEN"><button type="button">Load Profile</button></a>
