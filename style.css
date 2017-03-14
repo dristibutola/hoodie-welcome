@@ -5,3 +5,7 @@ border-color: white;
 color: white;
 display: inline-block;
 }
+
+a{
+text-decoration: none;
+}
