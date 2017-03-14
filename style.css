@@ -1,0 +1,7 @@
+.button{
+background-color:gray;
+cursor:pointer;
+border-color: white;
+color: white;
+display: inline-block;
+}
