@@ -15,7 +15,7 @@ function getProfile(data) {
 
     // the browsers fetch api... is similiar to getJson but is complex..
 
-    fetch(`http://api.github.com/user?access_token=${access_token}`)
+    fetch(`https://api.github.com/user?access_token=${access_token}`)
     .then(data => data.json())
     .then(data => showProfile(data))
     .catch(err => console.error(err));
