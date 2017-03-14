@@ -15,7 +15,7 @@ function getProfile(data) {
 
     // the browsers fetch api... is similiar to getJson but is complex..
 
-    fetch(`http://api.github.com/user?access_token=${access_token}`)
+    fetch('http://api.github.com/user?access_token=${access_token}')
     .then(data => data.json())
     .then(data => showProfile(data))
     .catch(err => console.error(err));
@@ -30,16 +30,16 @@ function getProfile(data) {
 function getAccessToken() {
 
     // why to fetch, if we have it already
-    if(access_token = localStorage.getItem('access_token'))
+    if(access_token == localStorage.getItem('access_token'))
         getProfile(access_token);
 
-    const clientId = `14a973416657e234da0a`;
+    const clientId = '14a973416657e234da0a' ;
     let code = window.location.search;
     code = code.replace("?code=", '');
     console.log('Got the code', code);
 
     // using javascript es6 template literals. they are encloses inside back ticks, the key under escape
-    fetch(`http://localhost:5000/${clientId}/${code}`)
+    fetch('http://localhost:5000/${clientId}/${code}')
     .then(data => data.json())
     .then(data => getProfile(data.access_token))
     .catch(err => console.error(err));
@@ -47,7 +47,7 @@ function getAccessToken() {
 
 function doWeHaveAccessToken(){
     // this will fail if localStorage is empty.
-    if(access_token = localStorage.getItem('access_token')){
+    if(access_token ==localStorage.getItem('access_token')){
         getProfile(access_token);
     }
     // nope we don't have it
